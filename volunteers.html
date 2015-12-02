@@ -1,5 +1,18 @@
 <html>
-<head><script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script></head>
+<head>
+<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+  <script>
+  // Get a database reference to our posts
+var ref = new Firebase("https://nrm2016.firebaseio.com/volunteers");
+
+// Attach an asynchronous callback to read the data at our posts reference
+ref.on("value", function(snapshot) {
+  console.log(snapshot.val());
+}, function (errorObject) {
+  console.log("The read failed: " + errorObject.code);
+});
+  </script>
+</head>
 <body>
 <h2>Welcome to NRM 2016 Campaign Volunteers</h2>
 
