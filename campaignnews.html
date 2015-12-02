@@ -39,8 +39,8 @@ function getCTime() {
 function addCampaignNews(){
   var ref = new Firebase("https://nrm2016.firebaseio.com/");
 var newsRef = ref.child("campaignnews");
-var title = document.getElementById("newstitle");
-var newsb = document.getElementById("newsbody");
+var title = document.getElementById("newstitle").value;
+var newsb = document.getElementById("newsbody").value;
 var author = "NRM";
 var cdate = getCDate();
 var ctime = getCTime();
