@@ -1,5 +1,6 @@
 <html>
-<head><script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+<head>
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
   <script>
 
 function addQuotes(){
@@ -16,13 +17,18 @@ quotesRef.push().set({
   author: author,
   place: place
 });
+ quote = "";
+ timesaid = "";
+ author = "";
+ place = "";
+ document.getElementById("msg").innerHTML = "Quote added.";
 }
   </script>
 </head>
 <body>
   <div style="width:60%; margin:0 auto; overflow:hidden;">
 <h2>Welcome to NRM 2016 Quotes</h2>
-
+<div id="msg" style="color:#036;"></div>
 <form>
   <p>
   <input type="text" name="quote" id="quote" style="width: 80%; padding:10px;" placeholder="Quote" />
