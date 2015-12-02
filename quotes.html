@@ -1,0 +1,47 @@
+<html>
+<head><script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+  <script>
+
+function addQuotes(){
+  var ref = new Firebase("https://nrm2016.firebaseio.com/");
+var quotesRef = ref.child("quotes");
+var quote = document.getElementById("quote").value;
+var times = document.getElementById("timesaid").value;
+var place = document.getElementById("place").value;
+var author = "President Museveni";
+
+quotesRef.push().set({
+  quote: quote,
+  timesaid: times,
+  author: author,
+  place: place
+});
+}
+  </script>
+</head>
+<body>
+  <div style="width:60%; margin:0 auto; overflow:hidden;">
+<h2>Welcome to NRM 2016 Quotes</h2>
+
+<form>
+  <p>
+  <input type="text" name="quote" id="quote" style="width: 80%; padding:10px;" placeholder="Quote" />
+  </p>
+<p>
+  <input type="text" name="author" id="author" style="width: 80%; padding:10px;" placeholder="Author" />
+  </p>
+  <p>
+  <input type="text" name="timesaid" id="timesaid" style="width: 80%; padding:10px;" placeholder="Time made" />
+  </p>
+  <p>
+  <input type="text" name="place" id="place" style="width: 80%; padding:10px;" placeholder="Place" />
+  </p>
+<p>
+<button name="subQuotes" id="subQuotes" style="padding:10px;" onclick="addQuotes(); return false;">Add Quotes</button>
+</p>
+
+</form>
+</div>
+</body>
+
+</html>
