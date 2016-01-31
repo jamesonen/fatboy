@@ -37,8 +37,8 @@ function getCTime() {
 }
 
 function addCampaignNews(){
-  var ref = new Firebase("https://nrm2016.firebaseio.com/");
-var newsRef = ref.child("campaignnews");
+  var ref = new Firebase("https://fatboy.firebaseio.com/");
+var newsRef = ref.child("fbnews");
 var title = document.getElementById("newstitle").value;
 var newsb = document.getElementById("newsbody").value;
 var news = window.parent.tinymce.get('newsbody').getContent();
@@ -57,7 +57,7 @@ newsRef.push().set({
 </head>
 <body>
   <div style="width:60%; margin:0 auto; overflow:hidden;">
-<h2>Welcome to NRM 2016 Campaign News</h2>
+<h2>Welcome to Fatboy News</h2>
 
 <form>
   <p>
