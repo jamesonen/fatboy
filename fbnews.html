@@ -36,18 +36,18 @@ function getCTime() {
      return dateTime;
 }
 
-function addCampaignNews(){
+function addFbNews(){
   var ref = new Firebase("https://fatboy.firebaseio.com/");
 var newsRef = ref.child("fbnews");
 var title = document.getElementById("newstitle").value;
 var newsb = document.getElementById("newsbody").value;
 var news = window.parent.tinymce.get('newsbody').getContent();
-var author = "NRM";
+var author = "FatBoy";
 var cdate = getCDate();
 var ctime = getCTime();
 newsRef.push().set({
   newstitle: title,
-  newsbody: newsb,
+  newsbody: news,
   author: author,
   cdate: cdate,
   ctime: ctime
@@ -65,7 +65,7 @@ newsRef.push().set({
   </p>
 <textarea name="newsbody" id="newsbody" style="width: 80%;"></textarea>
 <p>
-<button name="subNews" id="subNews" style="padding:10px;" onclick="addCampaignNews(); return false;">Add News</button>
+<button name="subNews" id="subNews" style="padding:10px;" onclick="addFbNews(); return false;">Add News</button>
 </p>
 
 </form>
