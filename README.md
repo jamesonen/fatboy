@@ -1,4 +1,4 @@
-# nrm2016
-Nrm 2016 Campaign Info App
+# fatboy
+Fatboy Radio App
 
-Campaign news and schedules
+Livestream, News and Information and so much more
